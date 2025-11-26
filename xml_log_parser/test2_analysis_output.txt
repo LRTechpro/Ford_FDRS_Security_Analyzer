@@ -1,0 +1,110 @@
+================================================================================
+TEST2.TXT ANALYSIS RESULTS
+================================================================================
+
+PRIMARY ECU/MODULE: 7D0
+
+ECU COUNTS (70 unique):
+  7D0: 80 occurrences
+  748: 39 occurrences
+  2000: 10 occurrences
+  758: 5 occurrences
+  720: 4 occurrences
+  733: 3 occurrences
+  701: 3 occurrences
+  704: 3 occurrences
+  717: 3 occurrences
+  707: 3 occurrences
+  782: 3 occurrences
+  757: 3 occurrences
+  711: 3 occurrences
+  729: 3 occurrences
+  787: 3 occurrences
+  ... and 55 more ECUs
+
+DID COUNTS (181 unique):
+  8060: 188 occurrences
+  8061: 99 occurrences
+  D027: 25 occurrences
+  F188: 21 occurrences
+  8068: 21 occurrences
+  F16B: 21 occurrences
+  8033: 21 occurrences
+  F10A: 21 occurrences
+  DE09: 17 occurrences
+  F111: 17 occurrences
+  DE00: 16 occurrences
+  DE01: 16 occurrences
+  DE02: 16 occurrences
+  DE03: 16 occurrences
+  DE04: 16 occurrences
+  DE05: 16 occurrences
+  DE06: 16 occurrences
+  DE07: 16 occurrences
+  DE08: 16 occurrences
+  F12A: 16 occurrences
+  F0E9: 16 occurrences
+  D704: 16 occurrences
+  F144: 16 occurrences
+  FEB6: 16 occurrences
+  F17F: 16 occurrences
+  F129: 16 occurrences
+  F190: 16 occurrences
+  D705: 16 occurrences
+  F18C: 16 occurrences
+  F0E8: 12 occurrences
+  ... and 151 more DIDs
+
+NRC COUNTS (1 unique):
+  NRC 0x31: 183 occurrences
+
+ERROR-TO-DID MAPPING (133 DIDs with errors):
+  (UNKNOWN): 44 errors
+    Example: 2025-10-17T13:23:58,522 ERROR otxcontainer.G2171555 - Error in application, message was: Template ca...
+  F0FD: 9 errors
+    Example: LOG>> Diag service response:  000007D87F2231...
+  F137: 9 errors
+    Example: LOG>> Diag service response:  000007D87F2231...
+  A014: 9 errors
+    Example: LOG>> Diag service response:  000007D87F2231...
+  F0F6: 9 errors
+    Example: LOG>> Diag service response:  000007D87F2231...
+  F13E: 9 errors
+    Example: LOG>> Diag service response:  000007D87F2231...
+  F158: 9 errors
+    Example: LOG>> Diag service response:  000007D87F2231...
+  F0F7: 9 errors
+    Example: LOG>> Diag service response:  000007D87F2231...
+  F0FE: 9 errors
+    Example: LOG>> Diag service response:  000007D87F2231...
+  F14B: 9 errors
+    Example: LOG>> Diag service response:  000007D87F2231...
+  F0EA: 9 errors
+    Example: LOG>> Diag service response:  000007D87F2231...
+  F17F: 8 errors
+    Example: NEW GetRestoreV1 call success? (0 = PASS, 1 = FAIL) = 0...
+  F0FB: 8 errors
+    Example: Diag service response:  000007D87F2231...
+  5805: 8 errors
+    Example: Diag service response:  000007D87F2231...
+  F139: 8 errors
+    Example: Diag service response:  000007D87F2231...
+  F149: 8 errors
+    Example: Diag service response:  000007D87F2231...
+  5839: 8 errors
+    Example: Diag service response:  000007D87F2231...
+  F132: 8 errors
+    Example: Diag service response:  000007D87F2231...
+  F131: 8 errors
+    Example: Diag service response:  000007D87F2231...
+  9140: 8 errors
+    Example: Diag service response:  000007D87F2231...
+  ... and 113 more DIDs
+
+MAPPING SUMMARY:
+  Total errors: 768
+  Mapped to specific DIDs: 724
+  Unmapped (UNKNOWN): 44
+  Mapping success rate: 94.3%
+
+================================================================================

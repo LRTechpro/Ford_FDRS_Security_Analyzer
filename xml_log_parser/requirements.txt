@@ -1,0 +1,19 @@
+# XML Log Parser - Requirements
+# All libraries are part of Python's standard library
+# No external dependencies required!
+
+# Python 3.7+ includes:
+# - xml.etree.ElementTree (XML parsing)
+# - tkinter (GUI)
+# - json (JSON export)
+# - re (regex for pattern matching)
+# - datetime (timestamps)
+# - threading (async operations)
+
+# For reference, if you need to verify your Python installation:
+# Run: python --version
+# Should show: Python 3.7.0 or higher
+
+# Optional: For better GUI experience on some systems
+# tkinter (usually comes with Python, but on some Linux systems may need installation)
+# Linux users: sudo apt-get install python3-tk

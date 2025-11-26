@@ -1,0 +1,101 @@
+FORD SERVICE WORK ORDER
+Work Order #: WO-2025-10-16-1534
+Date: October 16, 2025
+Time: 2:15 PM - 2:45 PM
+
+CUSTOMER INFORMATION:
+Name: Michael Thompson
+Phone: (555) 123-4567
+Email: mthompson@email.com
+
+VEHICLE INFORMATION:
+Year: 2023
+Make: Ford
+Model: F-150
+VIN: 1FTFW1E5XPF123456
+Mileage: 15,247
+License: ABC-123
+
+TECHNICIAN INFORMATION:
+Primary Technician: John Smith (Certified Ford Technician)
+Tech ID: TS-001
+Certification Level: Master Technician
+Service Advisor: Mary Johnson
+
+CUSTOMER CONCERN:
+"Check engine light came on intermittently. Vehicle seems to run fine but want to make sure everything is okay before a long road trip."
+
+DIAGNOSTIC FINDINGS:
+1. Performed comprehensive vehicle scan using Ford FDRS
+2. No current diagnostic trouble codes found
+3. Retrieved one historical code: P0171 (System too lean - Bank 1)
+4. Code was intermittent and not currently active
+5. Identified outdated PCM calibration as potential cause
+
+WORK PERFORMED:
+✅ Complete vehicle system scan
+✅ PCM software update to latest calibration (AB12-12A650-AD)
+✅ Cleared all stored diagnostic codes
+✅ Post-update verification testing
+✅ Test drive completed - no issues detected
+✅ Final system verification scan - all systems normal
+
+UPDATE DETAILS:
+- Previous software version: AB12-12A650-AC
+- Updated software version: AB12-12A650-AD
+- Update time: 14:30:22 - 14:31:35 (73 seconds)
+- Update result: SUCCESSFUL
+- Verification: PASSED
+
+PARTS USED:
+None (Software update only)
+
+LABOR:
+1.0 hour - Diagnostic testing and software update
+
+RECOMMENDATIONS:
+✅ PCM update resolved the intermittent lean condition
+✅ All systems now operating normally
+✅ Vehicle is ready for extended driving
+⚠️  Monitor tire pressure (front right at 28 PSI, should be 35 PSI)
+📋 Next service due at 18,000 miles
+
+CUSTOMER COMMUNICATION:
+Explained to customer that the intermittent check engine light was caused by an outdated engine calibration. Updated the software which should prevent the issue from recurring. Advised customer about low tire pressure and demonstrated how to check pressures. Customer satisfied with service and authorized completion.
+
+QUALITY CHECK:
+✅ Test drive completed - no warning lights
+✅ All systems verified operational
+✅ Customer walkthrough completed
+✅ Service documentation complete
+
+PAYMENT:
+Labor: $150.00
+Parts: $0.00
+Shop supplies: $5.00
+Tax: $12.40
+Total: $167.40
+Payment method: Credit Card (ending in 4567)
+
+WORK AUTHORIZATION:
+Customer signature: M. Thompson
+Date: 2025-10-16
+Time: 2:45 PM
+
+Technician signature: J. Smith
+Service advisor signature: M. Johnson
+
+NEXT APPOINTMENT:
+Scheduled maintenance at 18,000 miles
+Estimated date: December 2025
+Reminder sent: Yes
+
+ADDITIONAL NOTES:
+Customer very pleased with quick resolution. Software update addressed the root cause of the intermittent issue. All post-update testing confirmed successful repair. Vehicle released to customer in excellent condition.
+
+Work completed satisfactorily.
+No comeback issues expected.
+
+Service Quality Rating: 5/5 stars (Customer feedback)
+
+END OF WORK ORDER

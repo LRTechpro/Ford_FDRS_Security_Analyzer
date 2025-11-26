@@ -1,0 +1,68 @@
+[2025-10-14 14:35:14] INFO: Starting diagnostic session on vehicle
+[2025-10-14 14:35:15] INFO: Initializing communication with ECU network
+[2025-10-14 14:35:16] SUCCESS: Connected to Gateway Support Module (732 GSM)
+[2025-10-14 14:35:17] INFO: Reading DID F190 from APIM (7D0)...
+[2025-10-14 14:35:18] SUCCESS: VIN retrieved: 3FMCR9B60PRA12345
+[2025-10-14 14:35:19] INFO: Checking critical modules...
+[2025-10-14 14:35:20] INFO: Sending diagnostic request to PCM (7E0)
+[2025-10-14 14:35:21] ERROR: PCM (7E0) responded with NRC 0x35 - Invalid key
+[2025-10-14 14:35:21] WARNING: Security access failed for Powertrain Control Module
+[2025-10-14 14:35:22] INFO: Retrying with correct security seed...
+[2025-10-14 14:35:23] SUCCESS: Security access granted to PCM (7E0)
+[2025-10-14 14:35:24] INFO: Reading DTC (Diagnostic Trouble Codes) from PCM
+[2025-10-14 14:35:25] SUCCESS: No active DTCs in PCM
+[2025-10-14 14:35:26] INFO: Checking ABS module (760)...
+[2025-10-14 14:35:27] SUCCESS: ABS (760) - All systems operational
+[2025-10-14 14:35:28] INFO: Reading software version from APIM (7D0)
+[2025-10-14 14:35:29] INFO: DID F195 request sent to 7D0
+[2025-10-14 14:35:30] SUCCESS: APIM Software Version: SYNC4 v4.0.23291
+[2025-10-14 14:35:31] INFO: Checking Body Control Module (726 BCM)
+[2025-10-14 14:35:32] ERROR: BCM (726) - Communication timeout
+[2025-10-14 14:35:33] WARNING: Failed to read BCM status after 3 attempts
+[2025-10-14 14:35:34] INFO: Moving to Restraint Control Module (737 RCM)
+[2025-10-14 14:35:35] SUCCESS: RCM (737) - All airbag systems ready
+[2025-10-14 14:35:36] INFO: Checking Battery Energy Control Module (7E4 BECM)
+[2025-10-14 14:35:37] SUCCESS: BECM (7E4) - Battery voltage: 12.8V (Normal)
+[2025-10-14 14:35:38] INFO: Reading DID F18C (ECU Serial Number) from TCU (754)
+[2025-10-14 14:35:39] SUCCESS: TCU Serial: MU5T14H089FDA2025001234
+[2025-10-14 14:35:40] INFO: Checking Transmission Control Unit (754 TCU)
+[2025-10-14 14:35:41] SUCCESS: TCU (754) - Transmission in good condition
+[2025-10-14 14:35:42] INFO: Scanning Instrument Panel Cluster (720 IPC)
+[2025-10-14 14:35:43] ERROR: IPC (720) responded with NRC 0x78 - Request correctly received, response pending
+[2025-10-14 14:35:44] INFO: Waiting for IPC response...
+[2025-10-14 14:35:46] SUCCESS: IPC (720) - Display test completed successfully
+[2025-10-14 14:35:47] INFO: Checking audio system (727 ACM)
+[2025-10-14 14:35:48] SUCCESS: ACM (727) - Audio Control Module functioning
+[2025-10-14 14:35:49] INFO: Reading camera modules...
+[2025-10-14 14:35:50] SUCCESS: CMR (7C1) - Rear Camera operational
+[2025-10-14 14:35:51] INFO: Checking side detection cameras
+[2025-10-14 14:35:52] SUCCESS: SODCMC (6F2) - Side camera MC online
+[2025-10-14 14:35:53] SUCCESS: SODCMD (6F3) - Side camera MD online
+[2025-10-14 14:35:54] INFO: Testing door control modules
+[2025-10-14 14:35:55] SUCCESS: DDM (740) - Driver door functioning
+[2025-10-14 14:35:56] SUCCESS: PDM (741) - Passenger door functioning
+[2025-10-14 14:35:57] SUCCESS: DCMG (7B3) - Door control G ready
+[2025-10-14 14:35:58] SUCCESS: DCMH (7B4) - Door control H ready
+[2025-10-14 14:35:59] INFO: Checking HVAC system (733 HVAC)
+[2025-10-14 14:36:00] SUCCESS: HVAC (733) - Climate control operational
+[2025-10-14 14:36:01] INFO: Testing advanced driver assistance systems
+[2025-10-14 14:36:02] SUCCESS: ACCM (7C7) - Adaptive cruise control ready
+[2025-10-14 14:36:03] SUCCESS: PACM (750) - Park assist functioning
+[2025-10-14 14:36:04] SUCCESS: BLEM (731) - Blind spot system active
+[2025-10-14 14:36:05] INFO: Checking power steering (730 PSCM)
+[2025-10-14 14:36:06] ERROR: PSCM (730) responded with NRC 0x31 - Request out of range
+[2025-10-14 14:36:07] WARNING: Power steering diagnostic parameter invalid
+[2025-10-14 14:36:08] INFO: Reading DID F187 (Part Number) from multiple modules
+[2025-10-14 14:36:09] SUCCESS: APIM (7D0) Part: DSPU5T-14G670-CC
+[2025-10-14 14:36:10] SUCCESS: TCU (754) Part: DSMU5T-14H074-ABR
+[2025-10-14 14:36:11] SUCCESS: BECM (7E4) Part: DSNJ98-10B687-AL
+[2025-10-14 14:36:12] INFO: Checking wireless connectivity (725 WCM)
+[2025-10-14 14:36:13] ERROR: WCM (725) - No response received
+[2025-10-14 14:36:14] WARNING: Wireless Control Module may be offline
+[2025-10-14 14:36:15] INFO: Testing electric gateway (716 ECG2)
+[2025-10-14 14:36:16] SUCCESS: ECG2 (716) - Gateway functioning normally
+[2025-10-14 14:36:17] INFO: Final diagnostic sweep complete
+[2025-10-14 14:36:18] INFO: Summary: 4 errors, 3 warnings, 35 successful checks
+[2025-10-14 14:36:19] INFO: Critical modules status: PCM ✓, BCM ✗, RCM ✓, ABS ✓, IPC ✓, TCU ✓, BECM ✓
+[2025-10-14 14:36:20] WARNING: BCM communication issue requires attention
+[2025-10-14 14:36:21] INFO: Diagnostic session ended

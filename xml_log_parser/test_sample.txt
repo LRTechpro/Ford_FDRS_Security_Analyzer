@@ -1,0 +1,15 @@
+[SYSTEM] {"fdrsVersion":"45.5.7","fdspServerURL":"https://www.fdspcl.dealerconnection.com","dependency":{"core":"11.10.5","comms":"33.13.1-hf","commsLibraries":"32.12.2-USA","commsRnd":"5.4.0-SNAPSHOT","complexTools":"45.5.16","dspDomain":"15.3.21","framework":"72.31.55","hmi":"73.13.15","otxCommon":"40.21.20"}}
+
+2025-10-14T15:49:31,323 INFO otx.core.BaseApplication - Adding runtime logs appender to COMMS channel logger
+
+2025-10-14T17:48:00,808 INFO util.download.QueuedFileDownload - Request headers: {Range=bytes=0-}
+
+LOG>> Pinging node = 7D0
+
+LOG>> Diag service request :  000007D022D100
+
+LOG>> Diag service response:  000007D862D10001
+
+LOG>> Comms ok for node: 7D0
+
+LOG>> Diag service request :  000007D022806C

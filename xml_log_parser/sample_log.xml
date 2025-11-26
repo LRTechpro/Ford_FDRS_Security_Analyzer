@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestLog>
+    <TestSession timestamp="2025-10-14T10:30:00">
+        <TestCase id="TC001" name="ECU Communication Test">
+            <Status>Success</Status>
+            <Description>Testing ECU response time</Description>
+            <Request>
+                <ServiceID>0x22</ServiceID>
+                <DataIdentifier>0xF190</DataIdentifier>
+            </Request>
+            <Response>
+                <Status>Pass</Status>
+                <Data>0x62 0xF1 0x90 0x56 0x31 0x32 0x33</Data>
+                <Hex>62F19056313233</Hex>
+            </Response>
+        </TestCase>
+        
+        <TestCase id="TC002" name="Security Access Test">
+            <Status>Failure</Status>
+            <Description>Security access denied</Description>
+            <Request>
+                <ServiceID>0x27</ServiceID>
+                <SecurityLevel>0x01</SecurityLevel>
+            </Request>
+            <Response>
+                <Status>Error</Status>
+                <NRC>0x35</NRC>
+                <Description>Invalid Key - Security Access Denied</Description>
+            </Response>
+        </TestCase>
+        
+        <TestCase id="TC003" name="DTC Read Test">
+            <Status>Success</Status>
+            <Description>Reading diagnostic trouble codes</Description>
+            <Request>
+                <ServiceID>0x19</ServiceID>
+                <SubFunction>0x02</SubFunction>
+            </Request>
+            <Response>
+                <Status>Pass</Status>
+                <DTCCount>3</DTCCount>
+                <DTC code="0xC12345">Engine control system error</DTC>
+                <DTC code="0xP0420">Catalyst System Efficiency Below Threshold</DTC>
+                <DTC code="0xB1234">Body control module failure</DTC>
+            </Response>
+        </TestCase>
+        
+        <TestCase id="TC004" name="Session Control">
+            <Status>Success</Status>
+            <Request>
+                <ServiceID>0x10</ServiceID>
+                <SessionType>0x03</SessionType>
+            </Request>
+            <Response>
+                <Status>Pass</Status>
+                <SessionInfo>Extended Diagnostic Session Active</SessionInfo>
+            </Response>
+        </TestCase>
+        
+        <TestCase id="TC005" name="Routine Control">
+            <Status>Error</Status>
+            <Description>Routine execution failed</Description>
+            <Request>
+                <ServiceID>0x31</ServiceID>
+                <RoutineID>0xFF01</RoutineID>
+            </Request>
+            <Response>
+                <Status>Failure</Status>
+                <NRC>0x31</NRC>
+                <Description>Request Out Of Range</Description>
+                <AdditionalInfo hex="0xFF">Additional diagnostic data</AdditionalInfo>
+            </Response>
+        </TestCase>
+        
+        <TestCase id="TC006" name="Memory Read">
+            <Status>Success</Status>
+            <Request>
+                <ServiceID>0x23</ServiceID>
+                <MemoryAddress>0x1000</MemoryAddress>
+                <MemorySize>0x10</MemorySize>
+            </Request>
+            <Response>
+                <Status>Pass</Status>
+                <Data>48656C6C6F20576F726C64</Data>
+                <Hex>0x48 0x65 0x6C 0x6C 0x6F 0x20 0x57 0x6F 0x72 0x6C 0x64</Hex>
+            </Response>
+        </TestCase>
+        
+        <TestCase id="TC007" name="Pending Response Test">
+            <Status>Warning</Status>
+            <Request>
+                <ServiceID>0x22</ServiceID>
+            </Request>
+            <Response>
+                <Status>Pending</Status>
+                <NRC>0x78</NRC>
+                <Description>Request Correctly Received - Response Pending</Description>
+            </Response>
+        </TestCase>
+        
+        <TestCase id="TC008" name="Flash Programming">
+            <Status>Failure</Status>
+            <Request>
+                <ServiceID>0x34</ServiceID>
+                <BlockSequence>0x02</BlockSequence>
+            </Request>
+            <Response>
+                <Status>Error</Status>
+                <NRC>0x73</NRC>
+                <Description>Wrong Block Sequence Counter</Description>
+            </Response>
+        </TestCase>
+        
+        <TestCase id="TC009" name="VIN Read Test">
+            <Status>Success</Status>
+            <Request>
+                <ServiceID>0x22</ServiceID>
+                <DataIdentifier>0xF190</DataIdentifier>
+            </Request>
+            <Response>
+                <Status>Pass</Status>
+                <VIN>WBAKG1C58DE123456</VIN>
+                <HexData>57424B4B47314335384445313233343536</HexData>
+            </Response>
+        </TestCase>
+        
+        <TestCase id="TC010" name="Reset ECU">
+            <Status>Success</Status>
+            <Request>
+                <ServiceID>0x11</ServiceID>
+                <ResetType>0x01</ResetType>
+            </Request>
+            <Response>
+                <Status>Pass</Status>
+                <Result>ECU Reset Successful</Result>
+            </Response>
+        </TestCase>
+    </TestSession>
+</TestLog>

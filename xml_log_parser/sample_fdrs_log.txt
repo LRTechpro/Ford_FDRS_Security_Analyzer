@@ -1,0 +1,41 @@
+[SYSTEM] {"fdrsVersion":"45.6.8","fdspServerURL":"https://www.fdspcl.dealerconnection.com","dependency":{"core":"11.10.5","comms":"33.13.1-hf","commsLibraries":"32.12.2-USA","commsRnd":"5.4.0-SNAPSHOT","complexTools":"45.5.16","dspDomain":"15.3.21","framework":"72.31.55","hmi":"73.13.16","otxCommon":"40.21.20"}}
+
+2025-10-13T13:52:07,414 INFO otx.core.BaseApplication - Adding runtime logs appender to COMMS channel logger
+
+2025-10-13T14:35:21,500 INFO class otxcontainer.G2171556.authorLogs - 
+
+LOG>> END ~~ ProcessDidResponseValues
+
+2025-10-13T14:35:21,504 INFO class otxcontainer.G2171556.authorLogs - 
+
+LOG>> F16B (ASCII) =  MU5T-14J003-AF
+
+2025-10-13T14:35:21,506 INFO class otxcontainer.G2171556.authorLogs - 
+
+LOG>> F16B Type =  ECU Configuration
+
+2025-10-13T14:35:21,509 INFO class otxcontainer.G2171556.authorLogs - 
+
+LOG>> BEGIN ~~ ReadDid
+
+2025-10-13T14:35:21,512 INFO class otxcontainer.G2171556.authorLogs - 
+
+LOG>> Diag service request :  000007D022A011
+
+2025-10-13T14:35:21,522 DEBUG api.service.Channel - ISO15765_PS TX      -> 0,000,000,000 - [00,00,07,D0,22,A0,11]
+
+2025-10-13T14:35:21,525 DEBUG api.service.Channel - ISO15765_PS TX      -> 0,784,127,777 - [00,00,07,D0]
+
+2025-10-13T14:35:21,530 DEBUG api.service.Channel - ISO15765_PS RX      <- 0,784,133,615 - [00,00,07,D8,7F,22,31]
+
+2025-10-13T14:35:21,530 INFO class otxcontainer.G2171556.authorLogs - 
+
+LOG>> Diag service response:  000007D87F2231
+
+2025-10-13T14:35:21,534 INFO class otxcontainer.G2171556.authorLogs - 
+
+LOG>> Constant-field byte 4 (hex) : 7F
+
+2025-10-13T14:35:21,538 INFO class otxcontainer.G2171556.authorLogs - 
+
+LOG>> NRC = 31 (requestOutOfRange)

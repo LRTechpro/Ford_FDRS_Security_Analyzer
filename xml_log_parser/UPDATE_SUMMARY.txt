@@ -1,0 +1,244 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    ⭐ APPLICATION UPDATE - TEXT LOG SUPPORT ⭐
+═══════════════════════════════════════════════════════════════════════════════
+
+## 🎉 GREAT NEWS!
+
+Your XML Log Parser now supports **TEXT LOGS** too!
+
+═══════════════════════════════════════════════════════════════════════════════
+📁 NEW FILES CREATED
+═══════════════════════════════════════════════════════════════════════════════
+
+1. **text_log_parser.py** - NEW!
+   → Complete text log parsing engine
+   → Handles .txt, .log, and any text format
+   → Same features as XML parser (hex, NRC, filtering)
+
+2. **sample_log.txt** - NEW!
+   → Real automotive diagnostic session log
+   → 90+ lines of sample data
+   → Includes errors, successes, NRC codes, hex data
+   → Ready to test with!
+
+3. **TEXT_LOG_SUPPORT.md** - NEW!
+   → Complete guide for text log parsing
+   → Examples and use cases
+   → Command reference
+
+4. **gui_app.py** - UPDATED!
+   → Now supports BOTH XML and text logs
+   → Automatically detects file format
+   → Same interface for both types
+   → "Parse Log" button works for everything
+
+5. **README.md** - UPDATED!
+   → Now mentions text log support
+   → Updated feature list
+
+═══════════════════════════════════════════════════════════════════════════════
+✨ WHAT YOU CAN DO NOW
+═══════════════════════════════════════════════════════════════════════════════
+
+BEFORE (XML only):
+  ✅ Parse XML logs
+  ❌ Text logs - not supported
+
+NOW (XML + Text):
+  ✅ Parse XML logs (.xml)
+  ✅ Parse text logs (.txt, .log)
+  ✅ Parse ANY text format
+  ✅ Same hex & NRC decoding
+  ✅ Context lines for text logs
+  ✅ Timestamp extraction
+  ✅ Severity detection
+  ✅ One unified GUI
+
+═══════════════════════════════════════════════════════════════════════════════
+🚀 HOW TO USE (3 Easy Ways)
+═══════════════════════════════════════════════════════════════════════════════
+
+METHOD 1 - GUI (Works for Both XML and Text):
+  1. python gui_app.py
+  2. Click "Browse..."
+  3. Select ANY log file (.xml, .txt, .log)
+  4. Click "Parse Log"
+  5. Done!
+
+METHOD 2 - Command Line for Text Logs:
+  python text_log_parser.py yourlog.txt
+  python text_log_parser.py yourlog.txt error failure
+
+METHOD 3 - Command Line for XML Logs:
+  python xml_log_parser.py yourlog.xml
+  python xml_log_parser.py yourlog.xml error failure
+
+═══════════════════════════════════════════════════════════════════════════════
+📝 TRY THE SAMPLES
+═══════════════════════════════════════════════════════════════════════════════
+
+Test with XML Sample:
+  python gui_app.py
+  → Browse to: sample_log.xml
+  → Click "Parse Log"
+  → See XML results
+
+Test with Text Sample:
+  python gui_app.py
+  → Browse to: sample_log.txt
+  → Click "Parse Log"
+  → See text results with context!
+
+Command Line Test:
+  python text_log_parser.py sample_log.txt
+
+═══════════════════════════════════════════════════════════════════════════════
+🎯 TEXT LOG FEATURES
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ Line-by-line parsing
+✅ Context lines (before/after matches)
+✅ Timestamp extraction from logs
+✅ Severity detection (ERROR, WARNING, SUCCESS, etc.)
+✅ Color-coded severity in GUI
+✅ Hex code decoding (same as XML)
+✅ NRC code explanation (same as XML)
+✅ Structured field parsing (key=value)
+✅ JSON embedded data extraction
+✅ Export to JSON/TXT (same as XML)
+
+═══════════════════════════════════════════════════════════════════════════════
+📊 TEXT LOG EXAMPLE
+═══════════════════════════════════════════════════════════════════════════════
+
+Your Sample Log Contains:
+
+2025-10-14 10:30:15 [INFO] Starting ECU diagnostic session
+2025-10-14 10:30:18 [ERROR] Security access failed - NRC: 0x35
+2025-10-14 10:30:19 [SUCCESS] Security access granted
+2025-10-14 10:30:20 [ERROR] DTC: 0xC12345 - Engine control system error
+2025-10-14 10:30:27 [INFO] Data: 48656C6C6F20576F726C64
+2025-10-14 10:30:27 [INFO] ASCII interpretation: Hello World
+
+The Parser Will:
+  → Find all ERROR, SUCCESS lines
+  → Explain NRC 0x35 (Invalid Key)
+  → Decode hex 48656C6C6F20576F726C64 (Hello World)
+  → Show timestamps and severity
+  → Display context lines
+
+═══════════════════════════════════════════════════════════════════════════════
+💡 REAL-WORLD USE CASES
+═══════════════════════════════════════════════════════════════════════════════
+
+1. AUTOMOTIVE DIAGNOSTICS:
+   File: ecu_test.log
+   Command: python text_log_parser.py ecu_test.log error NRC failure
+   Result: All diagnostic errors with NRC codes explained
+
+2. APPLICATION LOGS:
+   File: app.log
+   Command: python text_log_parser.py app.log error exception critical
+   Result: Critical errors with timestamps and context
+
+3. TEST RESULTS:
+   File: test_results.txt
+   Command: python text_log_parser.py test_results.txt pass fail
+   Result: Test outcomes summarized
+
+4. BUILD LOGS:
+   File: build.log
+   Command: python text_log_parser.py build.log error warning failed
+   Result: Build problems identified
+
+5. MIXED LOGS (TEXT IN ONE SESSION, XML IN ANOTHER):
+   Use GUI - it handles both automatically!
+
+═══════════════════════════════════════════════════════════════════════════════
+📚 DOCUMENTATION
+═══════════════════════════════════════════════════════════════════════════════
+
+Updated/New Guides:
+
+  TEXT_LOG_SUPPORT.md    → Complete text log guide (NEW!)
+  HOW_TO_USE.md          → Works for both XML and text
+  README.md              → Updated with text log features
+  QUICK_START.txt        → Visual quick reference
+  NRC_REFERENCE.md       → NRC code lookup (unchanged)
+  GETTING_STARTED.md     → Step-by-step setup
+
+═══════════════════════════════════════════════════════════════════════════════
+🎯 WHAT HASN'T CHANGED
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ XML parsing still works exactly the same
+✅ Same GUI interface (just better!)
+✅ Same hex decoder
+✅ Same NRC explainer
+✅ Same export options
+✅ Same ease of use
+
+Just now it ALSO handles text logs!
+
+═══════════════════════════════════════════════════════════════════════════════
+⚡ QUICK START REMINDER
+═══════════════════════════════════════════════════════════════════════════════
+
+STEP 1: Install Python (if not already installed)
+  → https://www.python.org/downloads/
+  → Check "Add Python to PATH"
+
+STEP 2: Start the application
+  cd c:\Users\HWATKI16\Downloads\xml_log_parser
+  python gui_app.py
+
+STEP 3: Select ANY log file
+  → XML, TXT, LOG - all supported!
+
+STEP 4: Parse and enjoy!
+
+═══════════════════════════════════════════════════════════════════════════════
+📋 COMPLETE FILE LIST
+═══════════════════════════════════════════════════════════════════════════════
+
+Core Application:
+  ✅ xml_log_parser.py       - XML parser
+  ✅ text_log_parser.py      - Text parser (NEW!)
+  ✅ gui_app.py              - Unified GUI (UPDATED!)
+
+Samples:
+  ✅ sample_log.xml          - XML sample
+  ✅ sample_log.txt          - Text sample (NEW!)
+
+Documentation:
+  ✅ README.md               - Main docs (UPDATED!)
+  ✅ HOW_TO_USE.md           - Usage guide
+  ✅ TEXT_LOG_SUPPORT.md     - Text log guide (NEW!)
+  ✅ GETTING_STARTED.md      - Setup guide
+  ✅ QUICK_START.txt         - Visual reference
+  ✅ NRC_REFERENCE.md        - NRC codes
+  ✅ PROJECT_SUMMARY.md      - Overview
+  ✅ UPDATE_SUMMARY.txt      - This file! (NEW!)
+
+Utilities:
+  ✅ run_gui.bat             - Quick launcher
+  ✅ test_parser.py          - Test suite
+  ✅ requirements.txt        - Dependencies
+
+═══════════════════════════════════════════════════════════════════════════════
+✨ SUMMARY
+═══════════════════════════════════════════════════════════════════════════════
+
+Your application just got a MAJOR upgrade!
+
+BEFORE: XML Log Parser
+NOW:    Universal Log Parser (XML + Text)
+
+Same easy interface, more capabilities!
+
+Try it now:
+  python gui_app.py
+  
+Select sample_log.txt and see text parsing in action!
+
+═══════════════════════════════════════════════════════════════════════════════

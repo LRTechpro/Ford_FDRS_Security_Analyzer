@@ -1,0 +1,75 @@
+================================================================================
+TEST ANALYSIS RESULTS
+================================================================================
+
+PRIMARY ECU/MODULE: 754
+
+ECU COUNTS (80 unique):
+  754: 141 occurrences
+  748: 50 occurrences
+  1876: 15 occurrences
+  792: 5 occurrences
+  702: 4 occurrences
+  705: 4 occurrences
+  711: 4 occurrences
+  758: 4 occurrences
+  747: 4 occurrences
+  716: 4 occurrences
+  ... and 70 more ECUs
+
+DID COUNTS (58 unique):
+  8068: 53 occurrences
+  F120: 53 occurrences
+  D027: 34 occurrences
+  F188: 34 occurrences
+  F121: 34 occurrences
+  DEFF: 10 occurrences
+  DE00: 10 occurrences
+  DE01: 9 occurrences
+  DE08: 9 occurrences
+  DE0F: 9 occurrences
+  DE05: 9 occurrences
+  F163: 9 occurrences
+  DE0C: 9 occurrences
+  DE07: 9 occurrences
+  DE0E: 9 occurrences
+  F110: 9 occurrences
+  A012: 9 occurrences
+  EEFA: 9 occurrences
+  F15F: 9 occurrences
+  DE04: 9 occurrences
+  A01A: 9 occurrences
+  DE0B: 9 occurrences
+  DE11: 9 occurrences
+  DE0D: 9 occurrences
+  EEFB: 9 occurrences
+  DE03: 9 occurrences
+  DE0A: 9 occurrences
+  A015: 9 occurrences
+  DE10: 9 occurrences
+  F17F: 9 occurrences
+  ... and 28 more DIDs
+
+NRC COUNTS (2 unique):
+  NRC 0x7F: 74 occurrences
+  NRC 0x31: 18 occurrences
+
+MODULE COUNTS (0 unique):
+  No modules detected
+
+================================================================================
+VERIFICATION
+================================================================================
+
+Expected values:
+  Primary ECU should be: 754
+  Should detect DIDs: F16B, F163, F110, F120, EEFA, F15F, A01A, EEFB, F121, 8068...
+  Should detect NRCs: 31, 7F
+
+✅ Primary ECU correct: 754
+✅ DID detection working: 17/17 expected DIDs found
+✅ NRC detection working: 2/2 NRCs found
+
+🎉 ALL TESTS PASSED!
+
+================================================================================

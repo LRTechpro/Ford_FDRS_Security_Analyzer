@@ -1,0 +1,51 @@
+Test Log with NRC-22 Errors
+============================
+
+2024-01-15 14:32:15 - ECU Programming Initiated
+Service Request: 0x10 02 (Enter Programming Session)
+Response: 50 02 - Programming session started
+
+2024-01-15 14:32:18 - Security Access Request
+Service Request: 0x27 01 (Request Seed)
+Response: 67 01 12 34 56 78 - Seed provided
+
+2024-01-15 14:32:20 - Security Access Key
+Service Request: 0x27 02 AB CD EF 90 (Send Key)
+Response: 67 02 - Security access granted
+
+2024-01-15 14:32:25 - Programming Attempt #1
+Service Request: 0x34 00 44 12 34 56 78 00 10 (RequestDownload)
+Response: 7F 34 22 - Error: Conditions not correct
+
+2024-01-15 14:32:30 - Retry Programming
+Service Request: 0x34 00 44 12 34 56 78 00 10 (RequestDownload)
+Response: 7F 34 22 - NRC22 Conditions not correct for update
+
+2024-01-15 14:32:35 - Check Vehicle State
+Voltage: 11.8V (TOO LOW!)
+Engine: OFF
+Doors: Passenger door OPEN
+Parking Brake: NOT ENGAGED
+
+2024-01-15 14:32:40 - Another Programming Fail
+Service Request: 0x36 01 (TransferData)
+Response: 7F 36 22 - Throwing NRC-22 for updates. Known issue.
+
+2024-01-15 14:32:45 - Mixed Errors Example
+Service Request: 0x10 02 (Enter Programming Session) 
+Response: 7F 10 7F - serviceNotSupportedInActiveSession
+
+Service Request: 0x34 00 44 (RequestDownload)
+Response: 7F 34 22 - NRC 22 conditions not correct
+
+ERROR LOG SUMMARY:
+- Multiple NRC 22 errors detected (conditions not correct)
+- Some NRC 7F errors also present (session management)
+- Vehicle conditions not met for programming
+- Battery voltage too low, doors open, parking brake not set
+
+RESOLUTION REQUIRED:
+1. Fix vehicle conditions (voltage, doors, parking brake)
+2. Establish proper diagnostic session
+3. Retry programming operations
+4. This is a known issue for updates - check prerequisites

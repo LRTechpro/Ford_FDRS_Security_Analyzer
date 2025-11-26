@@ -1,0 +1,117 @@
+Diagnostic Session Started - 2025-10-14 10:30:00
+
+=== Ford FDRS Diagnostic Log ===
+[SYSTEM] {fdrsVersion45.6.8,fdspSer.txt
+
+Vehicle Information:
+VIN: 1FTFW1ET5DKF12345
+Model: F-150
+Year: 2024
+
+=== ECU Communication Analysis ===
+
+[10:30:01] Tester -> ECU 7D0 (APIM): Service 10 01 (Diagnostic Session Control - Default Session)
+[10:30:01] ECU 7D0 -> Tester: Positive Response 50 01 00 32 01 F4
+[10:30:01] SUCCESS: Default diagnostic session established with APIM
+
+[10:30:02] Tester -> ECU 7D0 (APIM): Service 27 01 (Security Access - Request Seed)
+[10:30:02] ECU 7D0 -> Tester: Positive Response 67 01 A1 B2 C3 D4
+[10:30:02] SUCCESS: Security seed received from APIM: A1B2C3D4
+
+[10:30:03] Tester -> ECU 7D0 (APIM): Service 27 02 12 34 56 78 (Security Access - Send Key)
+[10:30:03] ECU 7D0 -> Tester: Negative Response 7F 27 35
+[10:30:03] ERROR: Security access denied - Invalid key provided (NRC 35)
+
+[10:30:04] Tester -> ECU 7D0 (APIM): Service 27 02 87 65 43 21 (Security Access - Send Key - Retry)
+[10:30:04] ECU 7D0 -> Tester: Negative Response 7F 27 36
+[10:30:04] ERROR: Security access denied - Exceed number of attempts (NRC 36)
+
+[10:30:10] Waiting for security lockout timer...
+
+[10:30:15] Tester -> ECU 7D0 (APIM): Service 27 01 (Security Access - Request Seed - After Delay)
+[10:30:15] ECU 7D0 -> Tester: Positive Response 67 01 E5 F6 A7 B8
+[10:30:15] SUCCESS: New security seed received: E5F6A7B8
+
+[10:30:16] Tester -> ECU 7D0 (APIM): Service 27 02 78 9A BC DE (Security Access - Send Correct Key)
+[10:30:16] ECU 7D0 -> Tester: Positive Response 67 02
+[10:30:16] SUCCESS: Security access granted to APIM
+
+[10:30:17] Tester -> ECU 7D0 (APIM): Service 22 F1 90 (Read Data By Identifier - VIN)
+[10:30:17] ECU 7D0 -> Tester: Positive Response 62 F1 90 1F T2A123456789012345
+[10:30:17] SUCCESS: VIN read successfully from APIM
+
+[10:30:18] Tester -> ECU 7D0 (APIM): Service 22 F1 86 (Read Data By Identifier - ECU Serial Number)
+[10:30:18] ECU 7D0 -> Tester: Positive Response 62 F1 86 APIM12345678901234567890
+[10:30:18] SUCCESS: APIM serial number read
+
+[10:30:19] Tester -> ECU 7D0 (APIM): Service 22 F1 87 (Read Data By Identifier - ECU Part Number)
+[10:30:19] ECU 7D0 -> Tester: Positive Response 62 F1 87 JL3T-14G370-ABC
+[10:30:19] SUCCESS: APIM part number read
+
+[10:30:20] Tester -> ECU 7D0 (APIM): Service 2E F1 80 CONFIG_DATA_TEST (Write Data By Identifier)
+[10:30:20] ECU 7D0 -> Tester: Negative Response 7F 2E 22
+[10:30:20] ERROR: Write operation failed - Conditions not correct (NRC 22)
+
+[10:30:25] Tester -> ECU 716 (GWM): Service 10 03 (Diagnostic Session Control - Extended Session)
+[10:30:25] ECU 716 -> Tester: Positive Response 50 03 00 32 01 F4
+[10:30:25] SUCCESS: Extended diagnostic session established with Gateway Module
+
+[10:30:26] Tester -> ECU 716 (GWM): Service 27 01 (Security Access - Request Seed)
+[10:30:26] ECU 716 -> Tester: Negative Response 7F 27 33
+[10:30:26] ERROR: Security access denied by GWM (NRC 33) - Authentication required
+
+[10:30:27] Tester -> ECU 716 (GWM): Service 19 02 AF (Read DTC Information)
+[10:30:27] ECU 716 -> Tester: Positive Response 59 02 AF 04 B1234 00 P0171 00 P0174 00
+[10:30:27] SUCCESS: DTCs read from GWM: B1234, P0171, P0174
+
+[10:30:30] Tester -> ECU 7D0 (APIM): Service 34 00 44 12 34 56 78 00 10 00 00 (Request Download)
+[10:30:30] ECU 7D0 -> Tester: Negative Response 7F 34 70
+[10:30:30] ERROR: Programming operation rejected - Upload/Download not accepted (NRC 70)
+
+[10:30:35] Tester -> ECU 726 (BCM): Service 3E 00 (Tester Present)
+[10:30:35] Communication timeout - BCM not responding
+[10:30:35] ERROR: BCM communication timeout after 5000ms
+
+[10:30:40] Tester -> ECU 7D0 (APIM): Service 31 01 FF 01 (Routine Control - Start Self Test)
+[10:30:40] ECU 7D0 -> Tester: Positive Response 71 01 FF 01 00
+[10:30:40] SUCCESS: APIM self-test routine started
+
+[10:30:45] Tester -> ECU 7D0 (APIM): Service 31 03 FF 01 (Routine Control - Request Results)
+[10:30:45] ECU 7D0 -> Tester: Positive Response 71 03 FF 01 PASS
+[10:30:45] SUCCESS: APIM self-test completed successfully
+
+[10:30:50] Tester -> ECU 7E0 (PCM): Service 10 01 (Diagnostic Session Control)
+[10:30:50] ECU 7E0 -> Tester: Positive Response 50 01 00 32 01 F4
+[10:30:50] SUCCESS: Diagnostic session established with Powertrain Control Module
+
+[10:30:51] Tester -> ECU 7E0 (PCM): Service 22 F1 0C (Read Data By Identifier - Software Version)
+[10:30:51] ECU 7E0 -> Tester: Positive Response 62 F1 0C PCM_SW_V2.1.3
+[10:30:51] SUCCESS: PCM software version read
+
+[10:30:55] Tester -> ECU 7D0 (APIM): Service 28 00 01 (Communication Control - Disable RX/TX)
+[10:30:55] ECU 7D0 -> Tester: Positive Response 68 00 01
+[10:30:55] WARNING: APIM communication partially disabled
+
+[10:31:00] Tester -> ECU 7D0 (APIM): Service 28 00 00 (Communication Control - Enable RX/TX)
+[10:31:00] ECU 7D0 -> Tester: Positive Response 68 00 00
+[10:31:00] SUCCESS: APIM communication restored
+
+=== Session Summary ===
+Total Operations: 20
+Successful Operations: 14
+Failed Operations: 6
+Security Access Attempts: 5 (1 successful, 4 failed)
+Programming Attempts: 1 (failed)
+Communication Timeouts: 1
+Authentication Failures: 3
+Data Read Operations: 5
+Data Write Operations: 1 (failed)
+
+Security Concerns Detected:
+- Multiple failed security access attempts on APIM
+- Security lockout triggered (NRC 36)
+- Unauthorized programming attempt blocked
+- GWM authentication required but not provided
+- Communication control operations performed
+
+=== End of Diagnostic Session ===

@@ -1,0 +1,104 @@
+2025-10-14 10:30:15.234 [INFO] Starting ECU diagnostic session
+2025-10-14 10:30:15.456 [INFO] Connecting to ECU on CAN bus...
+2025-10-14 10:30:16.123 [SUCCESS] Connection established - ECU ID: 0x7E0
+2025-10-14 10:30:16.234 [INFO] Requesting diagnostic session control (Service 0x10)
+2025-10-14 10:30:16.345 [SUCCESS] Extended diagnostic session activated
+2025-10-14 10:30:17.001 [INFO] Reading Vehicle Identification Number (VIN)
+2025-10-14 10:30:17.123 [INFO] Request: Service=0x22 DID=0xF190
+2025-10-14 10:30:17.234 [SUCCESS] Response: 62F190 WBAKG1C58DE123456
+2025-10-14 10:30:17.345 [INFO] VIN decoded: WBAKG1C58DE123456
+2025-10-14 10:30:18.001 [INFO] Attempting security access - Level 0x01
+2025-10-14 10:30:18.123 [INFO] Seed received: 0x1234ABCD
+2025-10-14 10:30:18.234 [INFO] Calculating key from seed...
+2025-10-14 10:30:18.456 [ERROR] Security access failed - NRC: 0x35
+2025-10-14 10:30:18.567 [ERROR] Invalid Key - Security Access Denied
+2025-10-14 10:30:18.678 [WARNING] Retrying with corrected algorithm...
+2025-10-14 10:30:19.001 [INFO] Seed received: 0x5678DCBA
+2025-10-14 10:30:19.123 [SUCCESS] Security access granted - Key accepted
+2025-10-14 10:30:20.001 [INFO] Reading Diagnostic Trouble Codes (DTCs)
+2025-10-14 10:30:20.123 [INFO] Request: Service=0x19 SubFunction=0x02
+2025-10-14 10:30:20.234 [SUCCESS] Found 3 DTCs
+2025-10-14 10:30:20.345 [ERROR] DTC: 0xC12345 - Engine control system error (Permanent)
+2025-10-14 10:30:20.456 [WARNING] DTC: 0xP0420 - Catalyst System Efficiency Below Threshold
+2025-10-14 10:30:20.567 [WARNING] DTC: 0xB1234 - Body control module failure
+2025-10-14 10:30:21.001 [INFO] Attempting to clear DTCs
+2025-10-14 10:30:21.123 [ERROR] Clear DTC failed - NRC: 0x22
+2025-10-14 10:30:21.234 [ERROR] Conditions Not Correct - Engine must be off
+2025-10-14 10:30:22.001 [INFO] Reading freeze frame data
+2025-10-14 10:30:22.123 [INFO] Request: Service=0x19 SubFunction=0x04
+2025-10-14 10:30:22.234 [SUCCESS] Freeze frame data retrieved
+2025-10-14 10:30:22.345 [INFO] Data: 0xFF01020304050607
+2025-10-14 10:30:23.001 [INFO] Testing actuator control
+2025-10-14 10:30:23.123 [INFO] Request: Service=0x2F DID=0x1234
+2025-10-14 10:30:23.234 [ERROR] Actuator control failed - NRC: 0x31
+2025-10-14 10:30:23.345 [ERROR] Request Out Of Range - Invalid data identifier
+2025-10-14 10:30:24.001 [INFO] Attempting routine control
+2025-10-14 10:30:24.123 [INFO] Request: Service=0x31 RoutineID=0xFF01
+2025-10-14 10:30:24.234 [INFO] Response: 0x78 - Request Correctly Received, Response Pending
+2025-10-14 10:30:25.001 [INFO] Waiting for routine completion...
+2025-10-14 10:30:26.123 [ERROR] Routine execution failed - NRC: 0x72
+2025-10-14 10:30:26.234 [ERROR] General Programming Failure
+2025-10-14 10:30:27.001 [INFO] Reading memory address 0x1000 length 0x10
+2025-10-14 10:30:27.123 [INFO] Request: Service=0x23 Address=0x00001000 Size=0x10
+2025-10-14 10:30:27.234 [SUCCESS] Memory read successful
+2025-10-14 10:30:27.345 [INFO] Data: 48656C6C6F20576F726C64
+2025-10-14 10:30:27.456 [INFO] ASCII interpretation: Hello World
+2025-10-14 10:30:28.001 [INFO] Initiating flash programming sequence
+2025-10-14 10:30:28.123 [INFO] Request: Service=0x34 MemoryAddress=0x00010000
+2025-10-14 10:30:28.234 [SUCCESS] Download request accepted
+2025-10-14 10:30:28.345 [INFO] Block sequence counter: 0x01
+2025-10-14 10:30:29.001 [INFO] Transferring data block 1
+2025-10-14 10:30:29.123 [SUCCESS] Block 1 transferred - Counter: 0x01
+2025-10-14 10:30:29.234 [INFO] Transferring data block 2
+2025-10-14 10:30:29.345 [ERROR] Block transfer failed - NRC: 0x73
+2025-10-14 10:30:29.456 [ERROR] Wrong Block Sequence Counter - Expected 0x02, got 0x03
+2025-10-14 10:30:29.567 [WARNING] Restarting from last successful block
+2025-10-14 10:30:30.001 [INFO] Resending block 2 with correct counter
+2025-10-14 10:30:30.123 [SUCCESS] Block 2 transferred - Counter: 0x02
+2025-10-14 10:30:30.234 [INFO] Transferring data block 3
+2025-10-14 10:30:30.345 [SUCCESS] Block 3 transferred - Counter: 0x03
+2025-10-14 10:30:31.001 [INFO] Requesting transfer exit
+2025-10-14 10:30:31.123 [SUCCESS] Transfer completed successfully
+2025-10-14 10:30:31.234 [INFO] Verifying checksum: 0xABCD1234
+2025-10-14 10:30:31.345 [SUCCESS] Checksum verified
+2025-10-14 10:30:32.001 [INFO] Performing ECU reset
+2025-10-14 10:30:32.123 [INFO] Request: Service=0x11 ResetType=0x01
+2025-10-14 10:30:32.234 [SUCCESS] ECU reset initiated
+2025-10-14 10:30:32.345 [INFO] Waiting for ECU to restart...
+2025-10-14 10:30:35.001 [SUCCESS] ECU restarted successfully
+2025-10-14 10:30:35.123 [INFO] Reconnecting to ECU...
+2025-10-14 10:30:35.234 [SUCCESS] Connection re-established
+2025-10-14 10:30:36.001 [INFO] Running post-programming diagnostics
+2025-10-14 10:30:36.123 [SUCCESS] All post-programming checks passed
+2025-10-14 10:30:36.234 [INFO] Reading software version
+2025-10-14 10:30:36.345 [INFO] Request: Service=0x22 DID=0xF195
+2025-10-14 10:30:36.456 [SUCCESS] Software version: v2.5.1 Build 20251014
+2025-10-14 10:30:37.001 [INFO] Testing tester present functionality
+2025-10-14 10:30:37.123 [INFO] Request: Service=0x3E SubFunction=0x00
+2025-10-14 10:30:37.234 [SUCCESS] Tester present acknowledged
+2025-10-14 10:30:38.001 [INFO] Testing communication control
+2025-10-14 10:30:38.123 [ERROR] Communication control failed - NRC: 0x7F
+2025-10-14 10:30:38.234 [ERROR] Service Not Supported In Active Session
+2025-10-14 10:30:38.345 [WARNING] Need to switch to default session first
+2025-10-14 10:30:39.001 [INFO] Closing diagnostic session
+2025-10-14 10:30:39.123 [SUCCESS] Session terminated normally
+2025-10-14 10:30:39.234 [INFO] Disconnecting from ECU
+2025-10-14 10:30:39.345 [SUCCESS] Disconnected - Test session complete
+
+========================================
+Test Summary
+========================================
+Total Tests: 25
+Passed: 15
+Failed: 7
+Warnings: 3
+========================================
+Success Rate: 60%
+Failed Tests:
+  - Security access (NRC 0x35) - RESOLVED
+  - Clear DTC (NRC 0x22)
+  - Actuator control (NRC 0x31)
+  - Routine control (NRC 0x72)
+  - Block transfer (NRC 0x73) - RECOVERED
+  - Communication control (NRC 0x7F)
+========================================
