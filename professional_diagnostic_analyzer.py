@@ -154,7 +154,7 @@ class ProfessionalDiagnosticAnalyzer:
     def _create_professional_ui(self):
         """Create professional-grade user interface"""
         # Configure root window
-        self.root.title(f"Professional Automotive Diagnostic Analyzer v{self.VERSION}")
+        self.root.title(f"Ford FDRS Security Analyzer v{self.VERSION}")
         self.root.geometry("1400x900")
         self.root.minsize(1200, 800)
         self.root.configure(background="#f4f6fb")
